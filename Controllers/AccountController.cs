@@ -70,6 +70,6 @@ public class AccountController : ControllerBase
         if (!success)
             return Unauthorized();
 
-        return Ok("Success");
+        return Ok();
     }
 }
