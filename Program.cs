@@ -24,5 +24,9 @@ app.MapControllerRoute(
     pattern: "{controller}/{action=Index}/{id?}");
 
 app.MapFallbackToFile("index.html");
-
+app.UseCors(x => x
+      .AllowAnyOrigin()
+      .AllowAnyMethod()
+      .SetIsOriginAllowed(_ => true)
+      .AllowAnyHeader());
 app.Run();
